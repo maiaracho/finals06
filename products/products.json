@@ -1,0 +1,544 @@
+[
+  {
+    "id": 1,
+    "name": "Dice Black",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-earrings/dice_black.jpg",
+    "description": "Black dice earrings"
+  },
+  {
+    "id": 2,
+    "name": "Dice White",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-earrings/dice_white.jpg",
+    "description": "White dice earrings"
+  },
+  {
+    "id": 3,
+    "name": "Dice Black Feather",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-feather-earrings/dice_black_feather.jpg",
+    "description": "Black feather dice earrings"
+  },
+  {
+    "id": 4,
+    "name": "Dice White Feather",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-feather-earrings/dice_white_feather.jpg",
+    "description": "White feather dice earrings"
+  },
+  {
+    "id": 5,
+    "name": "Dice Star Blue",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_blue.jpeg",
+    "description": "Blue star dice earrings"
+  },
+  {
+    "id": 6,
+    "name": "Dice Star Green",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_green.jpeg",
+    "description": "Green star dice earrings"
+  },
+  {
+    "id": 7,
+    "name": "Dice Star Hotpink",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_hotpink.jpeg",
+    "description": "Hotpink star dice earrings"
+  },
+  {
+    "id": 8,
+    "name": "Dice Star Lightblue",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_lightblue.jpeg",
+    "description": "Light blue star dice earrings"
+  },
+  {
+    "id": 9,
+    "name": "Dice Star Orange",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_orange.jpeg",
+    "description": "Orange star dice earrings"
+  },
+  {
+    "id": 10,
+    "name": "Dice Star Purple",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_purple.jpeg",
+    "description": "Purple star dice earrings"
+  },
+  {
+    "id": 11,
+    "name": "Dice Star Red",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_red.jpeg",
+    "description": "Red star dice earrings"
+  },
+  {
+    "id": 12,
+    "name": "Dice Star Yellow",
+    "price": 345,
+    "image": "../Assets/dice-series/dice-star-earrings/dice_star_yellow.jpeg",
+    "description": "Yellow star dice earrings"
+  },
+  {
+    "id": 13,
+    "name": "2 Dice Star Blue",
+    "price": 345,
+    "image": "../Assets/dice-series/double-dice-star-earrings/2dice_star_blue.jpeg",
+    "description": "Double blue star dice earrings"
+  },
+  {
+    "id": 14,
+    "name": "2 Dice Star Green",
+    "price": 345,
+    "image": "../Assets/dice-series/double-dice-star-earrings/2dice_star_green.jpeg",
+    "description": "Double green star dice earrings"
+  },
+  {
+    "id": 15,
+    "name": "2 Dice Star Orange",
+    "price": 345,
+    "image": "../Assets/dice-series/double-dice-star-earrings/2dice_star_orange.jpeg",
+    "description": "Double orange star dice earrings"
+  },
+  {
+    "id": 16,
+    "name": "2 Dice Star Purple",
+    "price": 345,
+    "image": "../Assets/dice-series/double-dice-star-earrings/2dice_star_purple.jpeg",
+    "description": "Double purple star dice earrings"
+  },
+  {
+    "id": 17,
+    "name": "2 Dice Star Red",
+    "price": 345,
+    "image": "../Assets/dice-series/double-dice-star-earrings/2dice_star_red.jpeg",
+    "description": "Double red star dice earrings"
+  },
+  {
+    "id": 18,
+    "name": "Long Feather Blue",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_blue.jpeg",
+    "description": "Long blue dangling feather earrings"
+  },
+  {
+    "id": 19,
+    "name": "Long Feather Hotpink",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_hotpink.jpeg",
+    "description": "Long hotpink dangling feather earrings"
+  },
+  {
+    "id": 20,
+    "name": "Long Feather Orange",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_orange.jpeg",
+    "description": "Long orange dangling feather earrings"
+  },
+  {
+    "id": 21,
+    "name": "Long Feather Purple",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_purple.jpeg",
+    "description": "Long purple dangling feather earrings"
+  },
+  {
+    "id": 22,
+    "name": "Long Feather Red",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_red.jpeg",
+    "description": "Long red dangling feather earrings"
+  },
+  {
+    "id": 23,
+    "name": "Long Feather Yellow",
+    "price": 345,
+    "image": "../Assets/feather-series/long-dangling-feather-earrings/feather_long_yellow.jpeg",
+    "description": "Long yellow dangling feather earrings"
+  },
+  {
+    "id": 24,
+    "name": "Pearl Heart Bronze",
+    "price": 345,
+    "image": "../Assets/feather-series/pearl-heart-feather-earrings/feather_heart_bronze.jpeg",
+    "description": "Bronze heart pearl feather earrings"
+  },
+  {
+    "id": 25,
+    "name": "Pearl Heart Gold",
+    "price": 345,
+    "image": "../Assets/feather-series/pearl-heart-feather-earrings/feather_heart_gold.jpeg",
+    "description": "Gold heart pearl feather earrings"
+  },
+  {
+    "id": 26,
+    "name": "Pearl Heart Silver",
+    "price": 345,
+    "image": "../Assets/feather-series/pearl-heart-feather-earrings/feather_heart_silver.jpeg",
+    "description": "Silver heart pearl feather earrings"
+  },
+  {
+    "id": 27,
+    "name": "Short Feather Blue",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_blue.jpeg",
+    "description": "Short blue dangling feather earrings"
+  },
+  {
+    "id": 28,
+    "name": "Short Feather Green",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_green.jpeg",
+    "description": "Short green dangling feather earrings"
+  },
+  {
+    "id": 29,
+    "name": "Short Feather Lightblue",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_lightblue.jpeg",
+    "description": "Short light blue dangling feather earrings"
+  },
+  {
+    "id": 30,
+    "name": "Short Feather Paleorange",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_paleorange.jpeg",
+    "description": "Short pale orange dangling feather earrings"
+  },
+  {
+    "id": 31,
+    "name": "Short Feather Palered",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_palered.jpeg",
+    "description": "Short pale red dangling feather earrings"
+  },
+  {
+    "id": 32,
+    "name": "Short Feather Pink",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_pink.jpeg",
+    "description": "Short pink dangling feather earrings"
+  },
+  {
+    "id": 33,
+    "name": "Short Feather Purple",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_purple.jpeg",
+    "description": "Short purple dangling feather earrings"
+  },
+  {
+    "id": 34,
+    "name": "Short Feather Yellow",
+    "price": 345,
+    "image": "../Assets/feather-series/short-dangling-feather-earrings/feather_short_yellow.jpeg",
+    "description": "Short yellow dangling feather earrings"
+  },
+  {
+    "id": 35,
+    "name": "Star Feather Green",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_green.jpeg",
+    "description": "Green star feather dangling earrings"
+  },
+  {
+    "id": 36,
+    "name": "Star Feather Hotpink",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_hotpink.jpeg",
+    "description": "Hotpink star feather dangling earrings"
+  },
+  {
+    "id": 37,
+    "name": "Star Feather Lightblue",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_lightblue.jpeg",
+    "description": "Light blue star feather dangling earrings"
+  },
+  {
+    "id": 38,
+    "name": "Star Feather Orange",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_orange.jpeg",
+    "description": "Orange star feather dangling earrings"
+  },
+  {
+    "id": 39,
+    "name": "Star Feather Purple",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_purple.jpeg",
+    "description": "Purple star feather dangling earrings"
+  },
+  {
+    "id": 40,
+    "name": "Star Feather Red",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_red.jpg",
+    "description": "Red star feather dangling earrings"
+  },
+  {
+    "id": 41,
+    "name": "Star Feather Yellow",
+    "price": 345,
+    "image": "../Assets/feather-series/star-feather-dangling-earrings/feather_star_yellow.jpeg",
+    "description": "Yellow star feather dangling earrings"
+  },
+  {
+    "id": 42,
+    "name": "White Star Feather Blue",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_blue.jpeg",
+    "description": "White star blue feather dangling earrings"
+  },
+  {
+    "id": 43,
+    "name": "White Star Feather Green",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_green.jpeg",
+    "description": "White star green feather dangling earrings"
+  },
+  {
+    "id": 44,
+    "name": "White Star Feather Lightblue",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_lightblue.jpeg",
+    "description": "White star light blue feather dangling earrings"
+  },
+  {
+    "id": 45,
+    "name": "White Star Feather Orange",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_orange.jpeg",
+    "description": "White star orange feather dangling earrings"
+  },
+  {
+    "id": 46,
+    "name": "White Star Feather Pink",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_pink.jpeg",
+    "description": "White star pink feather dangling earrings"
+  },
+  {
+    "id": 47,
+    "name": "White Star Feather Purple",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_purple.jpeg",
+    "description": "White star purple feather dangling earrings"
+  },
+  {
+    "id": 48,
+    "name": "White Star Feather Red",
+    "price": 345,
+    "image": "../Assets/feather-series/white-star-feather-dangling-earrings/feather_starwhite_red.jpeg",
+    "description": "White star red feather dangling earrings"
+  },
+  {
+    "id": 49,
+    "name": "Bell Flower Blue",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_blue.jpeg",
+    "description": "Blue bell flower earrings"
+  },
+  {
+    "id": 50,
+    "name": "Bell Flower Hotpink",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_hotpink.jpeg",
+    "description": "Hotpink bell flower earrings"
+  },
+  {
+    "id": 51,
+    "name": "Bell Flower Paleblue",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_paleblue.jpeg",
+    "description": "Pale blue bell flower earrings"
+  },
+  {
+    "id": 52,
+    "name": "Bell Flower Paleorange",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_paleorange.jpeg",
+    "description": "Pale orange bell flower earrings"
+  },
+  {
+    "id": 53,
+    "name": "Bell Flower Palepink",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_palepink.jpg",
+    "description": "Pale pink bell flower earrings"
+  },
+  {
+    "id": 54,
+    "name": "Bell Flower Palepurple",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_palepurple.jpeg",
+    "description": "Pale purple bell flower earrings"
+  },
+  {
+    "id": 55,
+    "name": "Bell Flower Purple",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_purple.jpeg",
+    "description": "Purple bell flower earrings"
+  },
+  {
+    "id": 56,
+    "name": "Bell Flower Red",
+    "price": 345,
+    "image": "../Assets/flower-series/bell-flower-earrings/flower_bell_red.jpg",
+    "description": "Red bell flower earrings"
+  },
+  {
+    "id": 57,
+    "name": "Tulip Blue",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_blue.jpeg",
+    "description": "Blue tulip earrings"
+  },
+  {
+    "id": 58,
+    "name": "Tulip Hotpink",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_hotpink.jpeg",
+    "description": "Hotpink tulip earrings"
+  },
+  {
+    "id": 59,
+    "name": "Tulip Lightblue",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_lightblue.jpeg",
+    "description": "Light blue tulip earrings"
+  },
+  {
+    "id": 60,
+    "name": "Tulip Paleorange",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_paleorange.jpeg",
+    "description": "Pale orange tulip earrings"
+  },
+  {
+    "id": 61,
+    "name": "Tulip Palered",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_palered.jpeg",
+    "description": "Pale red tulip earrings"
+  },
+  {
+    "id": 62,
+    "name": "Tulip Purple",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_purple.jpeg",
+    "description": "Purple tulip earrings"
+  },
+  {
+    "id": 63,
+    "name": "Tulip Yellow",
+    "price": 345,
+    "image": "../Assets/flower-series/tulip-earrings/flower_tulip_yellow.jpg",
+    "description": "Yellow tulip earrings"
+  },
+  
+  {
+    "id": 64,
+    "name": "Berry Blue",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_blue.jpeg",
+    "description": "Blue berry earrings"
+  },
+  {
+    "id": 65,
+    "name": "Berry Paleblue",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_paleblue.jpeg",
+    "description": "Pale blue berry earrings"
+  },
+  {
+    "id": 66,
+    "name": "Berry Palegreen",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_palegreen.jpeg",
+    "description": "Pale green berry earrings"
+  },
+  {
+    "id": 67,
+    "name": "Berry Paleorange",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_paleorange.jpeg",
+    "description": "Pale orange berry earrings"
+  },
+  {
+    "id": 68,
+    "name": "Berry Palepink",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_palepink.jpeg",
+    "description": "Pale pink berry earrings"
+  },
+  {
+    "id": 69,
+    "name": "Berry Palepurple",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_palepurple.jpeg",
+    "description": "Pale purple berry earrings"
+  },
+  {
+    "id": 70,
+    "name": "Berry Purple",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_purple.jpeg",
+    "description": "Purple berry earrings"
+  },
+  {
+    "id": 71,
+    "name": "Berry Red",
+    "price": 345,
+    "image": "../Assets/fruit-series/berry-earrings/berry_red.jpg",
+    "description": "Red berry earrings"
+  },
+  {
+    "id": 72,
+    "name": "Double Berry Blue",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_blue.jpeg",
+    "description": "Double blue berry earrings"
+  },
+  {
+    "id": 73,
+    "name": "Double Berry Hotpink",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_hotpink.jpeg",
+    "description": "Double hotpink berry earrings"
+  },
+  {
+    "id": 74,
+    "name": "Double Berry Orange",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_orange.jpeg",
+    "description": "Double orange berry earrings"
+  },
+  {
+    "id": 75,
+    "name": "Double Berry Purple",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_purple.jpeg",
+    "description": "Double purple berry earrings"
+  },
+  {
+    "id": 76,
+    "name": "Double Berry Red",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_red.jpeg",
+    "description": "Double red berry earrings"
+  },
+  {
+    "id": 77,
+    "name": "Double Berry Yellow",
+    "price": 345,
+    "image": "../Assets/fruit-series/double-berry-earrings/berry_double_yellow.jpg",
+    "description": "Double yellow berry earrings"
+  }
+]
+
+

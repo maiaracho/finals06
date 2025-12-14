@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart — Made by Mari</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Source+Serif+4:opsz,wght@6..72,800&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="products.css">
+    <script src="cart.js"></script>
+
+    <style>
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .cart-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cart-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .qty-controls button {
+            padding: 4px 10px;
+            border: none;
+            background-color: #ff6b6b;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            width: fit-content;
+            padding: 6px 12px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cart-actions button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .back-btn {
+            background-color: #eee;
+            color: #333;
+        }
+
+        .buy-btn {
+            background-color: #ff6b6b;
+            color: #fff;
+        }
+
+        .cart-empty {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION (reuse from products.html) -->
+    <div id="sideMenu" class="side-menu">
+        <a href="../index.html">Home</a>
+        <a href="../About/about.html">About</a>
+        <a href="../Contact/contact.html">Contact</a>
+    </div>
+    <div id="overlay"></div>
+
+    <div class="top-bar">
+        <span class="top-bar-email"><i class="fas fa-envelope"></i> marizracho@gmail.com</span>
+        <span class="top-bar-promo">✧✧✧ 10% OFF FOR FIRST TIME PURCHASES WITH THE CODE: MARUCHI ✧✧✧</span>
+    </div>
+
+    <nav>
+        <div class="nav-left">
+            <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+        </div>
+
+        <div class="logo">
+            <a href="../index.html"><img src="../Assets/logo_orange.png" alt="Made by Mari Logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../About/about.html">About</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <span class="search">🔍</span>
+            <span class="wishlist">❤️</span>
+            <span class="cart">🛒</span>
+        </div>
+    </nav>
+
+    <h1 class="page-title">Your Cart</h1>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> &nbsp;>&nbsp; <span>Your Cart</span>
+    </div>
+
+    <!-- CART ITEMS -->
+    <div class="cart-container" id="cart-items"></div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="cart-actions">
+        <button class="back-btn" onclick="location.href='products.html'">← Back to Products</button>
+        <button class="buy-btn" onclick="alert('Thank you for your purchase!'); localStorage.removeItem('cart'); renderCart();">Buy Now</button>
+    </div>
+
+    <!-- FOOTER (reuse products.html footer) -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a>Shop</a>
+                <a>About</a>
+                <a>Size Chart</a>
+                <a>Contact Us</a>
+            </div>
+            <div class="footer-right">
+                <p><strong>Customer Service</strong> marizracho@gmail.com</p>
+                <p><strong>General Inquiries</strong> madebymari@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="payments">
+                <img src="../Assets/visa.png">
+                <img src="../Assets/mastercard.png">
+                <img src="../Assets/Gcash.png">
+            </div>
+            <p class="credit">made by mari | E-commerce by Maia Racho</p>
+            <div class="policy-links">
+                <a>REFUND POLICY</a>
+                <a>SHIPPING POLICY</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MOBILE MENU
+        const hamburger = document.getElementById("hamburgerBtn");
+        const sideMenu = document.getElementById("sideMenu");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+            sideMenu.classList.toggle("open");
+            overlay.classList.toggle("show");
+        });
+
+        overlay.addEventListener("click", () => {
+            sideMenu.classList.remove("open");
+            overlay.classList.remove("show");
+        });
+
+        // RENDER CART
+        function renderCart() {
+            const cart = getCart();
+            const container = document.getElementById("cart-items");
+
+            if (cart.length === 0) {
+                container.innerHTML = "<p class='cart-empty'>Your cart is empty.</p>";
+                updateCartIcon();
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" class="cart-img">
+                    <div class="cart-details">
+                        <h3>${item.name}</h3>
+                        <p>₱${item.price}</p>
+                        <div class="qty-controls">
+                            <button onclick="changeQuantity(${item.id}, -1); renderCart();">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="changeQuantity(${item.id}, 1); renderCart();">+</button>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(${item.id}); renderCart();">Remove</button>
+                    </div>
+                </div>
+            `).join("");
+
+            updateCartIcon();
+        }
+
+        renderCart();
+    </script>
+
+</body>
+</html>

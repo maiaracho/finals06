@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — Made by Mari</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="product-details.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="cart.js"></script>
+</head>
+
+<body>
+
+<!-- MOBILE MENU -->
+<div id="sideMenu" class="side-menu">
+    <a href="../index.html">Home</a>
+    <a href="../About/about.html">About</a>
+    <a href="../Contact/contact.html">Contact</a>
+</div>
+<div id="overlay"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span class="top-bar-email"><i class="fas fa-envelope"></i> marizracho@gmail.com</span>
+    <span class="top-bar-promo">✧✧✧ 10% OFF FOR FIRST TIME PURCHASES WITH THE CODE: MARUCHI ✧✧✧</span>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="nav-left">
+        <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+    </div>
+
+    <div class="logo">
+        <a href="../index.html"><img src="../Assets/logo_orange.png"></a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+        <span class="search">🔍</span>
+        <span class="wishlist">❤️</span>
+        <span class="cart">🛒</span>
+    </div>
+</nav>
+
+<!-- TITLE + BREADCRUMB -->
+<h1 class="page-title">Product Details</h1>
+
+<div class="breadcrumb">
+    <a href="../index.html">Home</a> &nbsp;>&nbsp;
+    <a href="products.html">All Products</a> &nbsp;>&nbsp;
+    <span id="product-name-breadcrumb"></span>
+</div>
+
+<!-- PRODUCT CONTENT -->
+<div id="product-container" class="product-detail-section"></div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-left">
+            <a>Shop</a>
+            <a>About</a>
+            <a>Size Chart</a>
+            <a>Contact Us</a>
+        </div>
+
+        <div class="footer-right">
+            <p><strong>Customer Service</strong> marizracho@gmail.com</p>
+            <p><strong>General Inquiries</strong> madebymari@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="payments">
+            <img src="../Assets/visa.png">
+            <img src="../Assets/mastercard.png">
+            <img src="../Assets/Gcash.png">
+        </div>
+
+        <p class="credit">made by mari | E-commerce by Maia Racho</p>
+
+        <div class="policy-links">
+            <a>REFUND POLICY</a>
+            <a>SHIPPING POLICY</a>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+// MOBILE MENU
+const hamburger = document.getElementById("hamburgerBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+});
+
+// PRODUCT DETAILS
+async function loadProduct() {
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+
+    const res = await fetch("products.json");
+    const products = await res.json();
+
+    const product = products.find(p => p.id === id);
+
+    if (!product) {
+        document.getElementById("product-container").innerHTML = "<h2>Product not found.</h2>";
+        return;
+    }
+
+    // Breadcrumb name
+    document.getElementById("product-name-breadcrumb").textContent = product.name;
+
+    // Load cart from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Check if already in cart
+    const inCart = cart.find(item => item.id === product.id);
+
+    document.getElementById("product-container").innerHTML = `
+    <div class="product-detail-wrapper">
+        <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+        </div>
+
+        <div class="product-info">
+            <h2 class="product-title serif">${product.name}</h2>
+            <p class="product-price serif">₱${product.price}</p>
+
+            <p class="product-description">${product.description}</p>
+
+            <button id="cartBtn" class="product-btn add-cart">
+                ${inCart ? "Remove from Cart" : "Add to Cart"}
+            </button>
+
+            <button id="checkoutBtn" class="product-btn checkout" onclick="location.href='cart.html'">
+                CheckOut
+            </button>
+
+            <button class="product-btn" onclick="location.href='products.html'">← Back to Products</button>
+        </div>
+    </div>
+`;
+
+    const cartBtn = document.getElementById("cartBtn");
+const checkoutBtn = document.getElementById("checkoutBtn");
+
+function updateCheckoutVisibility() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const exists = cart.find(item => item.id === product.id);
+    checkoutBtn.style.display = exists ? "inline-block" : "none";
+}
+
+updateCheckoutVisibility(); // Initial check
+
+cartBtn.addEventListener("click", () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const exists = cart.find(item => item.id === product.id);
+
+    if (!exists) {
+        // Add product
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: 1
+        });
+        cartBtn.textContent = "Remove from Cart";
+    } else {
+        // Remove product
+        cart = cart.filter(item => item.id !== product.id);
+        cartBtn.textContent = "Add to Cart";
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Refresh cart badge and checkout button visibility
+    updateCartIcon();
+    updateCheckoutVisibility();
+});
+}
+
+// CART ICON COUNTER (🛒)
+function updateCartIcon() {
+    const cartIcon = document.querySelector(".cart");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    // Remove existing badge if any
+    let badge = document.getElementById("cart-badge");
+    if (badge) badge.remove();
+
+    if (totalQty > 0) {
+        const badgeEl = document.createElement("span");
+        badgeEl.id = "cart-badge";
+        badgeEl.textContent = totalQty;
+        badgeEl.style.cssText = `
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 3px 7px;
+            font-size: 12px;
+            border-radius: 50%;
+        `;
+        cartIcon.style.position = "relative";
+        cartIcon.appendChild(badgeEl);
+    }
+}
+
+loadProduct();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Made by Mari</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Source+Serif+4:opsz,wght@6..72,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span class="top-bar-email">✉ marizracho@gmail.com</span>
+    <span class="top-bar-promo">✧✧✧ 10% OFF FOR FIRST TIME PURCHASES WITH THE CODE: MARUCHI ✧✧✧</span>
+</div>
+
+<!-- NAVIGATION (same as home) -->
+<nav>
+    <div class="nav-left">
+        <button id="hamburgerBtn" class="hamburger">☰</button>
+    </div>
+
+    <div class="logo">
+        <a href="../Home/index.html">
+            <img src="../Assets/logo_orange.png" alt="Made by Mari">
+        </a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../products/products.html">Products</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+        <span>🔍</span>
+        <span>❤️</span>
+        <span>🛒</span>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="about-header">
+    <p class="breadcrumb"><a href="../index.html">Home</a>&nbsp;›&nbsp; About</p>
+    <h1 class="serif">About the Brand</h1>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="about-intro">
+    <div class="about-text">
+        <h2 class="serif">About Us</h2>
+        <p>
+            Made by Mari is a handmade jewelry brand inspired by flowers,
+            friendship, and personal stories. Each piece is thoughtfully
+            designed to celebrate individuality and meaningful connections.
+        </p>
+        <p>
+            From colorful beads to delicate charms, our creations are meant
+            to be worn daily — as small reminders of joy, love, and creativity.
+        </p>
+    </div>
+
+    <div class="about-images">
+        <img src="../Assets/gallery4.jpeg" alt="Hands wearing bracelets">
+        <img src="../Assets/gallery5.jpeg" alt="Bracelets close up">
+    </div>
+</section>
+
+<!-- OUR JEWELRY -->
+<section class="about-jewelry">
+    <div class="jewelry-text">
+        <h2 class="serif">Our Jewelry</h2>
+        <p>
+            Each piece is handmade with care using quality materials.
+            Our collections are playful, feminine, and inspired by
+            flowers, colors, and memories.
+        </p>
+        <p>
+            Whether you're gifting someone special or treating yourself,
+            Made by Mari jewelry is designed to feel personal and timeless.
+        </p>
+    </div>
+
+    <div class="jewelry-gallery">
+        <img src="../Assets/gallery1.jpeg">
+        <img src="../Assets/gallery2.jpeg">
+        <img src="../Assets/gallery3.jpeg">
+    </div>
+</section>
+
+<!-- CREATOR SECTION -->
+<section class="creator-section">
+    <div class="creator-photo">
+        <img src="../Assets/mari.png" alt="Mari Racho">
+    </div>
+
+    <div class="creator-text">
+        <h3 class="serif">Mari Racho</h3>
+        <span class="creator-role">Creator</span>
+        <p>
+            Mari started Made by Mari as a passion project, turning her
+            love for crafting and design into a brand that celebrates
+            creativity and self-expression.
+        </p>
+        <p>
+            Every piece is designed with heart — inspired by real moments,
+            friendships, and the beauty of handmade work.
+        </p>
+    </div>
+
+    <div class="creator-friends">
+        <img src="../Assets/mariandmaia.png" alt="Mari and friends">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p class="credit">made by mari | E-commerce by Maia Racho</p>
+</footer>
+
+<script>
+const hamburger = document.getElementById("hamburgerBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+      sideMenu.classList.toggle("open");
+      overlay.classList.toggle("show");
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — Made by Mari</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Source+Serif+4:opsz,wght@6..72,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css"> <!-- your main theme -->
+    <link rel="stylesheet" href="products.css"> <!-- product page styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="cart.js"></script>
+</head>
+<body>
+
+    <!-- MOBILE MENU -->
+    <div id="sideMenu" class="side-menu">
+    <a href="../index.html">Home</a>
+    <a href="../About/about.html">About</a>
+    <a href="../Contact/contact.html">Contact</a>
+    </div>
+
+
+    <div id="overlay"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span class="top-bar-email"><i class="fas fa-envelope"></i> marizracho@gmail.com</span>
+        <span class="top-bar-promo">✧✧✧ 10% OFF FOR FIRST TIME PURCHASES WITH THE CODE: MARUCHI ✧✧✧</span>
+    </div>
+
+    <!-- NAVIGATION -->
+<nav>
+    <div class="nav-left">
+        <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+    </div>
+
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../Assets/logo_orange.png" alt="Made by Mari Logo">
+        </a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+        <span class="search">🔍</span>
+        <span class="wishlist">❤️</span>
+        <span class="cart">🛒</span>
+    </div>
+</nav>
+<h1 class="page-title">All Products</h1>
+<div class="breadcrumb">
+    <a href="../index.html">Home</a> &nbsp;>&nbsp; <span>All Products</span>
+</div>
+
+
+
+    <!-- FILTER -->
+    <div class="filter-section">
+    <div class="filter-left">
+        <span class="filter-label">FILTER BY</span>
+    </div>
+
+    <div class="filter-controls">
+        <select id="sort" onchange="sortProducts()">
+            <option value="best">Best Selling</option>
+            <option value="A-Z">Alphabetically, A–Z</option>
+            <option value="Z-A">Alphabetically, Z–A</option>
+            <option value="low-high">Price, low to high</option>
+            <option value="high-low">Price, high to low</option>
+        </select>
+    </div>
+</div>
+
+    <!-- PRODUCT GRID -->
+    <div class="products-container">
+        <div id="products-grid" class="products-grid"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a>Shop</a>
+                <a>About</a>
+                <a>Size Chart</a>
+                <a>Contact Us</a>
+            </div>
+
+            <div class="footer-right">
+                <p><strong>Customer Service</strong> marizracho@gmail.com</p>
+                <p><strong>General Inquiries</strong> madebymari@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="payments">
+                <img src="../Assets/visa.png">
+                <img src="../Assets/mastercard.png">
+                <img src="../Assets/Gcash.png">
+            </div>
+
+            <p class="credit">made by mari | E-commerce by Maia Racho</p>
+
+            <div class="policy-links">
+                <a>REFUND POLICY</a>
+                <a>SHIPPING POLICY</a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+/* ------------------ MOBILE MENU ------------------ */
+const hamburger = document.getElementById("hamburgerBtn");
+const sideMenu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
+
+overlay.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    overlay.classList.remove("show");
+});
+
+/* ------------------ PRODUCTS LOAD ------------------ */
+async function loadProducts() {
+    const res = await fetch("products.json");
+    const products = await res.json();
+
+    window.allProducts = products;
+    displayProducts(products);
+}
+
+function displayProducts(products) {
+    const grid = document.getElementById("products-grid");
+    grid.innerHTML = "";
+
+    products.forEach(p => {
+        grid.innerHTML += `
+            <div class="product-item" onclick="location.href='product-details.html?id=${p.id}'">
+                <img src="${p.image}" alt="${p.name}">
+                <p class='prod-name serif'>${p.name}</p>
+                <p class='prod-price'>₱${p.price}</p>
+            </div>
+        `;
+    });
+}
+
+function sortProducts() {
+    let sortBy = document.getElementById("sort").value;
+    let sorted = [...window.allProducts];
+
+    if (sortBy === "A-Z") {
+        sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } 
+    else if (sortBy === "Z-A") {
+        sorted.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    else if (sortBy === "low-high") {
+        sorted.sort((a, b) => a.price - b.price);
+    }
+    else if (sortBy === "high-low") {
+        sorted.sort((a, b) => b.price - a.price);
+    }
+
+    displayProducts(sorted);
+}
+
+loadProducts();
+</script>
+
+</body>
+</html>

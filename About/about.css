@@ -1,0 +1,167 @@
+/* ================= ABOUT PAGE ================= */
+
+/* PAGE HEADER */
+.about-header {
+    background: #ffffff;
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.about-header .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.about-header h1 {
+    font-size: 48px;
+    color: #FF7D59;
+}
+
+/* ABOUT INTRO */
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 80px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #FF7D59;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #C15E41;
+    margin-bottom: 15px;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-images img {
+    width: 70%;
+    border-radius: 4px;
+}
+
+.about-images img:last-child {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    width: 60%;
+}
+
+/* OUR JEWELRY */
+.about-jewelry {
+    background: #ffffff;
+    padding: 100px 80px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.jewelry-text h2 {
+    font-size: 32px;
+    color: #FF7D59;
+    margin-bottom: 15px;
+}
+
+.jewelry-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #C15E41;
+    margin-bottom: 15px;
+}
+
+.jewelry-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.jewelry-gallery img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.jewelry-gallery img:last-child {
+    grid-column: span 2;
+}
+
+/* CREATOR SECTION */
+.creator-section {
+    background: #E3F2FD;
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    gap: 40px;
+    align-items: center;
+}
+
+.creator-photo img,
+.creator-friends img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.creator-text h3 {
+    font-size: 28px;
+    color: #FF7D59;
+}
+
+.creator-role {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #C15E41;
+    margin-bottom: 15px;
+}
+
+.creator-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #C15E41;
+    margin-bottom: 15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .about-intro,
+    .about-jewelry {
+        grid-template-columns: 1fr;
+        padding: 50px 30px;
+    }
+
+    .about-images img {
+        width: 100%;
+        position: static;
+    }
+
+    .creator-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .creator-photo,
+    .creator-friends {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .about-text h2,
+    .jewelry-text h2 {
+        font-size: 26px;
+    }
+}
