@@ -92,7 +92,7 @@ nav {
 
 /* ------------------- HERO ------------------- */
 .hero {
-    background: url("assets/banner.JPG") center/cover no-repeat;
+    background: url("Assets/banner.jpg") center/cover no-repeat;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -310,3 +310,4 @@ nav {
         text-align: center;
     }
 }
+
