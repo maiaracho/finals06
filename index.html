@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made by Mari</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Quicksand:wght@300;400;600&family=Source+Serif+4:opsz,wght@6..72,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+
+    <!-- MOBILE MENU -->
+    <div id="sideMenu" class="side-menu">
+        <a href="../Home/index.html">Home</a>
+        <a href="../about/about.html">About</a>
+        <a href="../products/products.html">Products</a>
+        <a href="../contact/contact.html">Contact</a>
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span class="top-bar-email"><i class="fas fa-envelope"></i> marizracho@gmail.com</span>
+        <span class="top-bar-promo">✧✧✧ 10% OFF FOR FIRST TIME PURCHASES WITH THE CODE: MARUCHI ✧✧✧</span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-left">
+            <button id="hamburgerBtn" class="hamburger">&#9776;</button>
+        </div>
+
+        <div class="logo">
+            <a href="../Home/index.html">
+                <img src="assets/logo_orange.png" alt="Made by Mari Logo">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../About/about.html">About</a></li>
+            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <span class="search">🔍</span>
+            <span class="wishlist">❤️</span>
+            <span class="cart">🛒</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Crafted For You</h1>
+        <p>Handmade jewelry for your personal style</p>
+    </section>
+
+    <!-- MINI BANNER -->
+    <section class="mini-banner serif">
+        Made by Mari for Everyone
+    </section>
+
+    <!-- IMAGE STRIP -->
+    <section class="image-row">
+        <img src="Assets/img1.jpeg">
+        <img src="Assets/img2.jpeg">
+    </section>
+
+    <!-- FLORAL CONNECTION -->
+    <section class="floral-connection-wrapper">
+
+        <div class="floral-left">
+            <h2 class="serif">Floral Connection</h2>
+            <p>Expressing love through flowers</p>
+            <button class="shop-btn">SHOP NOW ➜</button>
+        </div>
+
+        <div class="floral-products">
+
+            <div class="floral-item">
+                <a href="../products/tulip-orange.html">
+                    <img src="Assets/prod1.jpeg">
+                </a>
+                <p class="prod-name">Tulip Orange</p>
+                <p class="prod-price">₱345.00 PHP</p>
+            </div>
+
+            <div class="floral-item">
+                <a href="../products/bell-paleblue.html">
+                    <img src="Assets/prod2.jpeg">
+                </a>
+                <p class="prod-name">Bell Paleblue</p>
+                <p class="prod-price">₱345.00 PHP</p>
+            </div>
+
+            <div class="floral-item">
+                <a href="../products/tulip-hotpink.html">
+                    <img src="Assets/prod3.jpeg">
+                </a>
+                <p class="prod-name">Tulip Hotpink</p>
+                <p class="prod-price">₱345.00 PHP</p>
+            </div>
+
+            <div class="floral-item">
+                <a href="../products/bell-blue.html">
+                    <img src="Assets/prod4.jpeg">
+                </a>
+                <p class="prod-name">Bell Blue</p>
+                <p class="prod-price">₱345.00 PHP</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="image-gallery">
+
+        <div class="gallery-row">
+            <img src="Assets/gallery1.jpeg">
+            <img src="Assets/gallery2.jpeg">
+            <img src="Assets/gallery3.jpeg">
+        </div>
+
+        <div class="gallery-row">
+            <img src="Assets/gallery4.jpeg">
+            <img src="Assets/gallery5.jpeg">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-left">
+                <a>Shop</a>
+                <a>About</a>
+                <a>Size Chart</a>
+                <a>Contact Us</a>
+            </div>
+
+            <div class="footer-right">
+                <p><strong>Customer Service</strong> marizracho@gmail.com</p>
+                <p><strong>General Inquiries</strong> madebymari@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="payments">
+                <img src="Assets/visa.png">
+                <img src="Assets/mastercard.png">
+                <img src="Assets/Gcash.png">
+            </div>
+
+            <p class="credit">made by mari | E-commerce by Maia Racho</p>
+
+            <div class="policy-links">
+                <a>REFUND POLICY</a>
+                <a>SHIPPING POLICY</a>
+            </div>
+        </div>
+
+    </footer>
+
+<script>
+    const hamburger = document.getElementById("hamburgerBtn");
+    const sideMenu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+
+    hamburger.addEventListener("click", () => {
+        sideMenu.classList.toggle("open");
+        overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+        sideMenu.classList.remove("open");
+        overlay.classList.remove("show");
+    });
+</script>
+
+</body>
+</html>
